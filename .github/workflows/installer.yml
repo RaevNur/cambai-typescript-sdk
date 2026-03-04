@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - run: npm install
       - run: npm run build --if-present
       - name: Install dependencies in examples
-        run: npm ci
+        run: npm install
         working-directory: ./examples
       - name: Typecheck examples
         run: npx tsc --allowJs --checkJs --noEmit --module NodeNext --moduleResolution NodeNext *.js
