@@ -36,7 +36,7 @@ const client = new CambClient({ apiKey: 'YOUR_CAMB_API_KEY' });
 
 #### Baseten
 
-To deploy the model go to models from baseten example: <https://www.baseten.co/library/mars8-flash/> and deploy then perform setup like below
+To deploy the model go to models from baseten example: <https://www.baseten.co/library/mars6/> and deploy then perform setup like below
 
 ```javascript
 import { CambClient, CambApi, saveStreamToFile } from '@camb-ai/sdk';
@@ -294,9 +294,8 @@ Check out the `examples/` directory for complete, runnable examples:
 ## 🔗 Links
 
 - [Documentation](https://docs.camb.ai)
-- [GitHub Repository](https://github.com/Camb-ai/cambai-node-sdk)
+- [GitHub Repository](https://github.com/Camb-ai/cambai-typescript-sdk)
 - [Python SDK](https://github.com/Camb-ai/cambai-python-sdk)
-- [Discord Community](https://discord.gg/hzXnxTxhFw)
 
 ## License
 
