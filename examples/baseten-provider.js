@@ -1,4 +1,4 @@
-import { CambClient, CambApi, saveStreamToFile } from '@camb-ai/sdk';
+import { CambClient, saveStreamToFile } from '@camb-ai/sdk';
 import * as fs from 'fs';
 
 // Initialize client with Baseten provider
@@ -27,12 +27,12 @@ async function main() {
         console.log('Generating speech with Baseten provider...');
         const requestPayload = {
             text: 'Hello World and my dear friends',
-            language: CambApi.CreateStreamTtsRequestPayload.Language.EnUs,
-            speech_model: CambApi.CreateStreamTtsRequestPayload.SpeechModel.Mars8,
+            language: "en-us",
+            speech_model: "mars-pro",
             voice_id: 1, // Required but ignored when using custom provider
             additional_body_parameters: {
                 reference_audio: referenceAudio,
-                reference_language: CambApi.CreateStreamTtsRequestPayload.Language.EnUs  // required
+                reference_language: "en-us"  // required
             }
         };
 

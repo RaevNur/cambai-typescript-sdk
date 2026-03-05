@@ -26,14 +26,15 @@ async function main() {
             text: 'Hello from Camb AI! This is a demonstration of our advanced text-to-speech technology using the MARS Pro model.',
             voice_id: voiceId,
             language: CambApi.CreateStreamTtsRequestPayload.Language.EnUs,
-            speech_model: CambApi.CreateStreamTtsRequestPayload.SpeechModel.Mars8,
+            speech_model: CambApi.CreateStreamTtsRequestPayload.SpeechModel.MarsPro,
             output_configuration: {
-                format: 'mp3'
+                format: 'wav'
             }
         });
+        console.log(response);
 
         // Save the audio stream to a file
-        const outputFile = 'tts_output.mp3';
+        const outputFile = 'tts_output.wav';
         await saveStreamToFile(response, outputFile);
         console.log(`✓ Success! Audio saved to ${outputFile}`);
 

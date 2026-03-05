@@ -50,6 +50,7 @@ async function testDubbing() {
                 break;
             } else if (statusResponse.status === 'ERROR') {
                 console.error('Dubbing task failed!');
+                console.error('Details:', JSON.stringify(statusResponse, null, 2));
                 break;
             }
 
